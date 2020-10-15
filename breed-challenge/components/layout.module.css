@@ -1,0 +1,12 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.navItem {
+    padding: 1rem;
+}
+.navList {
+    display: flex;
+    list-style: none;
+}
