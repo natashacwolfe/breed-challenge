@@ -5,16 +5,35 @@ import fetch from "node-fetch";
 import Layout from "../components/Layout";
 import BreedTile from "../components/BreedTile";
 
-export default function Home() {
+export default function Home({ randomImage }) {
   return (
     <Layout>
       <Head>
         <title>Breeds</title>
       </Head>
-      <div>Welcome to the breed challenge!</div>
-      <BreedTile />
+      <div>
+        <span>Welcome to the breed challenge!</span>
+        <span>Click a breed to above to see more pups!</span>
+      </div>
+
+      <BreedTile img={randomImage} />
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  // You can use any data fetching library
+  const res = await fetch("https://dog.ceo/api/breeds/image/random");
+  const randomImage = await res.json();
+
+  // By returning { props: posts }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      randomImage,
+    },
+  };
 }
 
 // export default function Home() {

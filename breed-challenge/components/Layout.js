@@ -3,7 +3,7 @@ import style from "../components/layout.module.css";
 import Link from "next/link";
 
 export default function Layout({ children }) {
-  let breeds = ['Affenpinscher', 'Boxer', 'Cotondetulear', 'Havanese', 'Malamute', 'Pug']
+  let breeds = ['affenpinscher', 'boxer', 'cotondetulear', 'havanese', 'malamute', 'pug']
   return (
     <div className="container">
       <nav className={style.nav}>
@@ -11,7 +11,7 @@ export default function Layout({ children }) {
         {breeds.map(breed => (
           <Link key={breed} href={`/breeds/[breed]`} as={`/breeds/${breed}`}>
           <a>
-          <li className={style.navItem}>{breed}</li>
+          <li className={style.navItem}>{breed.toUpperCase()}</li>
           </a>
           </Link>
         ))}
