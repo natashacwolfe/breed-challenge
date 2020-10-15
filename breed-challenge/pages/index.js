@@ -15,7 +15,11 @@ export default function Home({ randomImage }) {
         <span>Here is a random cute pup,</span>
         <span>Click a breed to above to see more!</span>
         <div className={styles.imgContainer}>
-          <img className={styles.img} src={randomImage.message} alt="Random cuteness"/>
+          <img
+            className={styles.img}
+            src={randomImage.message}
+            alt="Random cuteness"
+          />
         </div>
       </div>
     </Layout>

@@ -30,6 +30,9 @@ export default function Layout({ children }) {
         </ul>
       </nav>
       <main>{children}</main>
+      <footer className={style.footer}>
+        <span>Random Cuteness &bull; 2020</span>
+      </footer>
     </div>
   );
 }
