@@ -5,6 +5,16 @@
 }
 .navItem {
     padding: 1rem;
+    border: 1px solid rgb(255,255,255, 0);
+    color: black;
+}
+.navItem:hover {
+    color: blue;
+    border-bottom: blue 1px solid;
+    transition: ease 1s;
+}
+.navItem:active {
+    color: aqua;
 }
 .navList {
     display: flex;

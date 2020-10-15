@@ -3,7 +3,6 @@ import styles from "../styles/Home.module.css";
 import React from "react";
 import fetch from "node-fetch";
 import Layout from "../components/Layout";
-import BreedTile from "../components/BreedTile";
 
 export default function Home({ randomImage }) {
   return (
@@ -11,12 +10,14 @@ export default function Home({ randomImage }) {
       <Head>
         <title>Breeds</title>
       </Head>
-      <div>
+      <div className={styles.container}>
         <span>Welcome to the breed challenge!</span>
-        <span>Click a breed to above to see more pups!</span>
+        <span>Here is a random cute pup,</span>
+        <span>Click a breed to above to see more!</span>
+        <div className={styles.imgContainer}>
+          <img className={styles.img} src={randomImage.message} alt="Random cuteness"/>
+        </div>
       </div>
-
-      <BreedTile img={randomImage} />
     </Layout>
   );
 }
