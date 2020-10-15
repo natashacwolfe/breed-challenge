@@ -1,0 +1,32 @@
+.breedInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  font-size: 2rem;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  width: 50%;
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.imgContainer {
+  height: 15rem;
+  width: 50%;
+  overflow: hidden;
+}
