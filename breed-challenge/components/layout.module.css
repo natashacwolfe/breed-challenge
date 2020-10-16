@@ -5,6 +5,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: gray;
+  font-weight: 500;
+  margin-top: 2rem;
 }
 .nav {
   display: flex;
@@ -16,15 +19,62 @@
   border: 1px solid rgb(255, 255, 255, 0);
   color: black;
 }
-.navItem:hover {
-  color: blue;
-  border-bottom: blue 1px solid;
-  transition: ease 1s;
+.navItemToggle {
+  display: none;
 }
-.navItem:active {
+.navItem:hover {
   color: aqua;
+  border-bottom: aqua 1px solid;
+  transition: ease 1s;
 }
 .navList {
   display: flex;
   list-style: none;
+}
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+    .navItem {
+      padding: .5rem
+    }
+  }
+
+@media (max-width: 768px) {
+  .open {
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: rbga;
+    background-color: rgb(228, 233, 237);
+    background-color: rgba(228, 233, 237, 1);
+    overflow: hidden;
+    transition: 0.3s;
+
+  }
+  .navContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .navItemToggle {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    top: 1rem;
+    left: .75rem;
+  }
+  .nav {
+    display: none;
+  }
+  .navItem {
+    padding: .1rem
+  }
+  .navToggleShow {
+    display: flex;
+  }
+  .navList {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.1rem;
+    margin-left: .5rem;
+  }
 }
