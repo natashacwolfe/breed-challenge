@@ -9,6 +9,12 @@
   font-weight: 500;
   margin-top: 2rem;
 }
+.menuIcon {
+  border: solid 1px;
+  border-radius: 25%;
+  padding: 0.3rem;
+  display: flex;
+}
 .nav {
   display: flex;
   flex-direction: row;
@@ -32,10 +38,10 @@
   list-style: none;
 }
 @media only screen and (min-width: 768px) and (max-width: 979px) {
-    .navItem {
-      padding: .5rem
-    }
+  .navItem {
+    padding: 0.5rem;
   }
+}
 
 @media (max-width: 768px) {
   .open {
@@ -48,7 +54,6 @@
     background-color: rgba(228, 233, 237, 1);
     overflow: hidden;
     transition: 0.3s;
-
   }
   .navContainer {
     display: flex;
@@ -59,13 +64,13 @@
     cursor: pointer;
     position: relative;
     top: 1rem;
-    left: .75rem;
+    left: 0.75rem;
   }
   .nav {
     display: none;
   }
   .navItem {
-    padding: .1rem
+    padding: 0.1rem;
   }
   .navToggleShow {
     display: flex;
@@ -75,6 +80,6 @@
     flex-direction: column;
     align-items: flex-start;
     padding: 0.1rem;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
 }
