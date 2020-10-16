@@ -13,7 +13,7 @@ export default function Home({ randomImage }) {
       <div className={styles.container}>
         <span>Welcome to the breed challenge!</span>
         <span>Here is a random cute pup,</span>
-        <span>Click a breed to above to see more!</span>
+        <span>go to menu to explore more breeds!</span>
         <div className={styles.imgContainer}>
           <img
             className={styles.img}
